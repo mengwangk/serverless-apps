@@ -12,7 +12,9 @@
 - [Github - Build a Modern Web App](https://github.com/aws-samples/aws-modern-application-workshop)
 - [Build a Serverless Web App](build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito)
 - [AWS SAM](https://aws.amazon.com/serverless/sam/)
-- [serverless stack](https://serverless-stack.com/#table-of-contents)
+- [Serverless Stack](https://serverless-stack.com/#table-of-contents)
+- [AWS Serverless Airline Booking]( https://github.com/aws-samples/aws-serverless-airline-booking)
+- [AWS Amplify](https://aws-amplify.github.io/docs/)
 
 ## GCP
 
