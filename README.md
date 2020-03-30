@@ -16,12 +16,15 @@
 - [AWS Serverless Airline Booking]( https://github.com/aws-samples/aws-serverless-airline-booking)
 - [AWS Amplify](https://aws-amplify.github.io/docs/)
 
+
 ## GCP
 
-- [GCP Flowcharts(https://grumpygrace.dev/posts/gcp-flowcharts/)
+- [GCP Flowcharts](https://grumpygrace.dev/posts/gcp-flowcharts/)
+
 
 
 ## Azure
+
 
 
 ## Alibaba Cloud
