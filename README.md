@@ -18,6 +18,8 @@
 
 ## GCP
 
+- [GCP Flowcharts(https://grumpygrace.dev/posts/gcp-flowcharts/)
+
 
 ## Azure
 
