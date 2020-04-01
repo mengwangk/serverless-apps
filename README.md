@@ -15,16 +15,13 @@
 - [Serverless Stack](https://serverless-stack.com/#table-of-contents)
 - [AWS Serverless Airline Booking]( https://github.com/aws-samples/aws-serverless-airline-booking)
 - [AWS Amplify](https://aws-amplify.github.io/docs/)
-
+- [Serverless User Authentication](https://serverless.com/blog/strategies-implementing-user-authentication-serverless-applications/)
+- [Serverless AWS HTTP API](https://serverless.com/blog/aws-http-api-support/)
 
 ## GCP
 
 - [GCP Flowcharts](https://grumpygrace.dev/posts/gcp-flowcharts/)
 
-
-
 ## Azure
-
-
 
 ## Alibaba Cloud
