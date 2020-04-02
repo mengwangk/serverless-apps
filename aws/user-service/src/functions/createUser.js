@@ -1,5 +1,6 @@
 'use strict'
 const AWS = require('aws-sdk')
+const bcrypt = require('bcryptjs')
 
 module.exports.createUser = async (event, context) => {
   const body = JSON.parse(event.body)
@@ -9,7 +10,7 @@ module.exports.createUser = async (event, context) => {
     TableName: process.env.DYNAMODB_USER_TABLE,
     Item: {
       pk: username,
-      password: password
+      password: bcrypt.hashSync(password, 10)
     }
   }
   try {

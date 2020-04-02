@@ -57,6 +57,8 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
+  environment:
+    DYNAMODB_USER_TABLE: ${self:custom.dynamodb.userTable}
 
 # you can add packaging information here
 #package:
@@ -72,12 +74,12 @@ functions:
     handler: src/functions/createUser.createUser
     events:
       - http:
-        method: post
-        cors: true
-        path: /v1/user
-        request:
-          schema:
-            application/json: ${file(src/schema/create_user_request.json)}
+          method: post
+          cors: true
+          path: /v1/user
+          request:
+            schema:
+              application/json: ${file(src/schema/create_user_request.json)}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -114,10 +116,9 @@ functions:
 #            host: example.com
 #            path: /hello
 
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
+#  Define function environment variables here
 
+    
 # you can add CloudFormation resource templates here
 #resources:
 #  Resources:
@@ -135,21 +136,21 @@ plugins:
   - serverless-mocha
 custom:
   dynamodb:
-    userTable: ${self:service}-user-${self:provider.stage}
+    userTable: ${self:service}-userTable-${self:provider.stage}
   serverless-mocha-plugin:
     testTemplate: templates/test-template.ejs
     functionTemplate: templates/function-template.ejs
-  resources:
-    Resources:
-      userTable:
-        Type: AWS::DynamoDB::Table
-        DeletionPolicy: Retain
-        Properties:
-          TableName: ${self:custom.dynamodb.userTable}
-          AttributeDefinitions:
-            - AttributeName: pk
-              AttributeType: S
-          KeySchema:
-            - AttributeName: pk
-              KeyType: HASH
-          BillingMode: PAY_PER_REQUEST
+resources:
+  Resources:
+    userTable:
+      Type: AWS::DynamoDB::Table
+      DeletionPolicy: Retain
+      Properties:
+        TableName: ${self:custom.dynamodb.userTable}
+        AttributeDefinitions:
+          - AttributeName: pk
+            AttributeType: S
+        KeySchema:
+          - AttributeName: pk
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
