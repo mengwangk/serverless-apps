@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: service-template
+service: user-service
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -30,6 +30,15 @@ provider:
 #  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "dynamodb:Query"
+        - "dynamodb:PutItem"
+      Resource:
+        - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/${self:custom.dynamodb.userTable}
+        - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/${self:custom.dynamodb.userTable}/index/pk
+
 #  iamRoleStatements:
 #    - Effect: "Allow"
 #      Action:
@@ -68,7 +77,7 @@ functions:
         path: /v1/user
         request:
           schema:
-            application/jsoon: ${file(src/schema/create_user_request.json)}
+            application/json: ${file(src/schema/create_user_request.json)}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -125,6 +134,22 @@ plugins:
   - serverless-pseudo-parameters
   - serverless-mocha
 custom:
+  dynamodb:
+    userTable: ${self:service}-user-${self:provider.stage}
   serverless-mocha-plugin:
     testTemplate: templates/test-template.ejs
     functionTemplate: templates/function-template.ejs
+  resources:
+    Resources:
+      userTable:
+        Type: AWS::DynamoDB::Table
+        DeletionPolicy: Retain
+        Properties:
+          TableName: ${self:custom.dynamodb.userTable}
+          AttributeDefinitions:
+            - AttributeName: pk
+              AttributeType: S
+          KeySchema:
+            - AttributeName: pk
+              KeyType: HASH
+          BillingMode: PAY_PER_REQUEST
