@@ -17,6 +17,9 @@
 - [AWS Amplify](https://aws-amplify.github.io/docs/)
 - [Serverless User Authentication](https://serverless.com/blog/strategies-implementing-user-authentication-serverless-applications/)
 - [Serverless AWS HTTP API](https://serverless.com/blog/aws-http-api-support/)
+- [fullstack-serverless](https://github.com/MadSkills-io/fullstack-serverless)
+- [Serverless Workshop](https://github.com/serverless/workshop)
+- [Serverless Components](https://github.com/serverless/components/tree/master/templates)
 
 ## GCP
 
