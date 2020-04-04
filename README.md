@@ -20,6 +20,7 @@
 - [fullstack-serverless](https://github.com/MadSkills-io/fullstack-serverless)
 - [Serverless Workshop](https://github.com/serverless/workshop)
 - [Serverless Components](https://github.com/serverless/components/tree/master/templates)
+- [Serverless Nextjs](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-nextjs-component)
 
 ## GCP
 
