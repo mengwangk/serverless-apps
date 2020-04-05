@@ -1,16 +1,3 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
 service: serverlessjams
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
@@ -23,6 +10,16 @@ service: serverlessjams
 provider:
   name: aws
   runtime: python3.8
+  environment:
+    DYNAMODB_TABLE: serverlessjams-voteCounts
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - dynamodb:Scan
+        - dynamodb:UpdateItem
+        - dynamodb:PutItem
+      Resource: "arn:aws:dynamodb:*:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
 
 # you can overwrite defaults here
 #  stage: dev
