@@ -20,7 +20,6 @@ provider:
         - dynamodb:PutItem
       Resource: "arn:aws:dynamodb:*:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
-
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
@@ -55,8 +54,10 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  recordSongVote:
+    handler: backend/record_song_vote.handler
+  getSongVoteCounts:
+    handler: backend/get_song_vote_counts.handler
 
 resources:
   Resources:
