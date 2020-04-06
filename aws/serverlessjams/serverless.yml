@@ -56,9 +56,18 @@ provider:
 functions:
   recordSongVote:
     handler: backend/record_song_vote.handler
+    events:
+      - http:
+          path: song/vote
+          method: post
+          cors: true
   getSongVoteCounts:
     handler: backend/get_song_vote_counts.handler
-
+    events:
+      - http:
+          path: votes
+          method: get
+          cors: true
 resources:
   Resources:
     songsTable:
