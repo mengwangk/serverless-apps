@@ -93,7 +93,6 @@ resources:
 plugins:
   - serverless-finch
   - serverless-python-requirements
-  
 custom:
   client:
     bucketName: serverlessjam-kmw12345 # (see Configuration Parameters below)

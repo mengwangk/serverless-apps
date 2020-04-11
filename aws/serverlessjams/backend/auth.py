@@ -1,6 +1,3 @@
-import os
-import requests
-
 from backend.get_token import get_token
 from backend.verify_token import verify_token
 
