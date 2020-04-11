@@ -31,6 +31,7 @@ $(document).ready(function(){
   async function voteForSong(songName) {
     const id_token = await auth0.getTokenSilently();
     console.log(id_token)
+    console.log(JSON.stringify({"songName": songName}))
     const response = await fetch(vote_endpoint, {
       method: "POST",
       mode: 'cors',

@@ -19,7 +19,9 @@ def handler(event, context):
     )
     response = {
         "statusCode": 200,
-        "headers": {"Access-Control-Allow-Origin": "*"},
+        "headers": {
+            "Access-Control-Allow-Origin": "*"
+        },
         "body": json.dumps({"votes": result["Attributes"]["votes"]["N"]})
     }
     return response

@@ -12,6 +12,8 @@ provider:
   runtime: python3.8
   environment:
     DYNAMODB_TABLE: serverlessjams-voteCounts
+    AUTH0_DOMAIN: dev-jhwp8naw.auth0.com
+    AUTH0_API_ID: 0djyx0nvg8
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -54,12 +56,16 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
+  auth:
+    handler: backend/auth.handler
   recordSongVote:
     handler: backend/record_song_vote.handler
     events:
       - http:
           path: song/vote
           method: post
+          authorizer: 
+            name: auth
           cors: true
   getSongVoteCounts:
     handler: backend/get_song_vote_counts.handler
@@ -86,10 +92,18 @@ resources:
 
 plugins:
   - serverless-finch
-
+  - serverless-python-requirements
+  
 custom:
   client:
     bucketName: serverlessjam-kmw12345 # (see Configuration Parameters below)
     distributionFolder: frontend
     errorDocument: index.html
-    # [other configuration parameters] (see Configuration Parameters below)
+  pythonRequirements:
+    dockerizePip: non-linux
+    
+package:
+  exclude:
+    - node_modules/**
+    - frontend/**
+    - package-lock.json

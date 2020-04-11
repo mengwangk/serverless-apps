@@ -1,8 +1,8 @@
 import os
 import requests
 
-from get_token import get_token
-from verify_token import verify_token
+from backend.get_token import get_token
+from backend.verify_token import verify_token
 
 AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
 
