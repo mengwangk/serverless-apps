@@ -4,8 +4,8 @@ $(document).ready(function(){
     document.getElementsByClassName("ui red button")[0].addEventListener("click", recordVote);
   });
   
-  var vote_endpoint = "https://z0koff90nk.execute-api.us-east-1.amazonaws.com/dev/song/vote"
-  var get_votes_endpoint = "https://z0koff90nk.execute-api.us-east-1.amazonaws.com/dev/votes"
+  var vote_endpoint = "https://0djyx0nvg8.execute-api.us-east-1.amazonaws.com/dev/song/vote"
+  var get_votes_endpoint = "https://0djyx0nvg8.execute-api.us-east-1.amazonaws.com/dev/votes"
   
   function setVotes(songName, voteCount) {
     // Get div containing vote count and set the new voteCount
@@ -29,10 +29,16 @@ $(document).ready(function(){
   }
   
   async function voteForSong(songName) {
+    const id_token = await auth0.getTokenSilently();
+    console.log(id_token)
     const response = await fetch(vote_endpoint, {
       method: "POST",
       mode: 'cors',
       headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + id_token
+      },
       body: JSON.stringify({"songName": songName})
     })
     const result_json = await response.json()

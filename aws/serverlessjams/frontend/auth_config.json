@@ -1,4 +1,5 @@
 {
     "domain": "dev-jhwp8naw.auth0.com",
-    "clientId": "pWuSMhmThEMHwcreEMkhUFAHPVZ5bLMX"
+    "clientId": "pWuSMhmThEMHwcreEMkhUFAHPVZ5bLMX",
+    "audience": "0djyx0nvg8"
 }
