@@ -4,3 +4,6 @@
 [submodule "aws/noteapp/serverless-stack-demo-client"]
 	path = aws/noteapp/serverless-stack-demo-client
 	url = https://github.com/AnomalyInnovations/serverless-stack-demo-client.git
+[submodule "aws/noteapp/serverless-stack-com"]
+	path = aws/noteapp/serverless-stack-com
+	url = https://github.com/AnomalyInnovations/serverless-stack-com.git
