@@ -23,6 +23,7 @@
     "standard": "^14.3.3"
   },
   "dependencies": {
+    "stripe": "^8.44.0",
     "uuid": "^7.0.3"
   }
 }
