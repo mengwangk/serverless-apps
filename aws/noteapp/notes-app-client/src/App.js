@@ -1,23 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
+import { LinkContainer } from "react-router-bootstrap";
 
 function App() {
   return (
     <div className="App container">
-      <Navbar fluid collapseOnSelect bg="light">
-          <Navbar.Brand>
-            <Link to="/">Scratch</Link>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <LinkContainer to="/">
+          <Navbar.Brand href="/">Scratch</Navbar.Brand>
+        </LinkContainer>
+        <Navbar.Toggle/>
+        <Navbar.Collapse className="justify-content-end">
             <Nav>
-              <Nav.Item href="/signup">Signup</Nav.Item>
-              <Nav.Item href="/login">Login</Nav.Item>
+              <LinkContainer to="/signup">
+                <Nav.Link href="/signup">Signup</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/login">
+                <Nav.Link href="/login">Login</Nav.Link>
+              </LinkContainer>
             </Nav>
-          </Navbar.Collapse>
+        </Navbar.Collapse>
       </Navbar>
       <Routes />
     </div>
