@@ -4,7 +4,7 @@ export default {
       BUCKET: "YOUR_S3_UPLOADS_BUCKET_NAME"
     },
     apiGateway: {
-      REGION: "YOUR_API_GATEWAY_REGION",
+      REGION: "us-east-1",
       URL: "YOUR_API_GATEWAY_URL"
     },
     cognito: {
