@@ -42,6 +42,7 @@ export default function Login() {
         <Form.Group controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
+            size="lg"
             autoFocus
             type="email"
             value={fields.email}
@@ -51,6 +52,7 @@ export default function Login() {
         <Form.Group controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            size="lg"
             value={fields.password}
             onChange={handleFieldChange}
             type="password"
