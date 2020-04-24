@@ -21,7 +21,7 @@ export default function Routes() {
       <Route exact path="/notes/new">
         <NewNote />
       </Route>
-      
+
       {/* Finally, catch all unmatched routes */}
       <Route>
         <NotFound />
