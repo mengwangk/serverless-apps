@@ -41,7 +41,8 @@ export default function NewNote() {
         <Form.Group controlId="content">
           <Form.Control
             value={content}
-            componentClass="textarea"
+            as="textarea"
+            autoFocus
             onChange={(e) => setContent(e.target.value)}
           />
         </Form.Group>
