@@ -95,7 +95,7 @@ export default function Notes() {
           </Form.Group>
           {note.attachment && (
             <Form.Group>
-              <Form.Label>Attachment</Form.Label>
+              <Form.Label column sm={2} >Attachment</Form.Label>
               <Form.Label>
                 <a
                   target="_blank"
