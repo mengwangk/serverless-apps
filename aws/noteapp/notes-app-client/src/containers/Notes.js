@@ -96,7 +96,7 @@ export default function Notes() {
           {note.attachment && (
             <Form.Group>
               <Form.Label>Attachment</Form.Label>
-              <Form.Control isStatic="true">
+              <Form.Label>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -104,7 +104,7 @@ export default function Notes() {
                 >
                   {formatFilename(note.attachment)}
                 </a>
-              </Form.Control>
+              </Form.Label>
             </Form.Group>
           )}
           <Form.Group controlId="file">
