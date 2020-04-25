@@ -23,3 +23,7 @@
 .Home .notes p {
   color: #666;
 }
+.Home .card-text {
+  padding-top: 10px;
+}
+

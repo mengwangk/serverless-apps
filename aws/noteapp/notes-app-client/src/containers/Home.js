@@ -35,7 +35,6 @@ export default function Home() {
   }
 
   function renderNotesList(notes) {
-    console.log(notes[0].content.trim().split("\n")[0]);
     return [{}].concat(notes).map((note, i) =>
       i !== 0 ? (
         <LinkContainer key={note.noteId} to={`/notes/${note.noteId}`}>
@@ -46,7 +45,7 @@ export default function Home() {
                 <Card.Subtitle className="mb-2 text-muted">
                   {"Created: " + new Date(note.createdAt).toLocaleString()}
                 </Card.Subtitle>
-                <Card.Text><br/>{note.content}</Card.Text>
+                <Card.Text className="card-text">{note.content}</Card.Text>
               </Card.Body>
             </Card>
           </ListGroup.Item>
