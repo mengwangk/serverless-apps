@@ -1,15 +1,12 @@
 # Serverless
 
 ## My Apps
-
 - [Scratch](https://scratch-notes-app.netlify.app/)
 
 ## Framework
-
 - [serverless](https://serverless.com/learn/)
 
 ## AWS
-
 - [AWS Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
 - [Real World Serverless App](https://github.com/awslabs/realworld-serverless-application)
 - [Build a Modern Web App](https://aws.amazon.com/getting-started/projects/build-modern-app-fargate-lambda-dynamodb-python/)
