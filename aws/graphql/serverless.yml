@@ -1,0 +1,13 @@
+service: my-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  hello:
+    handler: handler.query
+    events:
+      - http:
+          path: /
+          method: POST

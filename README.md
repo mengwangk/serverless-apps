@@ -5,6 +5,14 @@
 
 ## Framework
 - [serverless](https://serverless.com/learn/)
+- [zappa](https://github.com/Miserlou/Zappa)
+- [chalice](https://github.com/aws/chalice)
+- [sparta](https://gosparta.io/)
+
+## DevOps
+- [iopipe](https://github.com/iopipe)
+- [epsagon](https://github.com/epsagon)
+- [dashbird](https://dashbird.io/)
 
 ## AWS
 - [AWS Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
@@ -22,6 +30,18 @@
 - [Serverless Workshop](https://github.com/serverless/workshop)
 - [Serverless Components](https://github.com/serverless/components/tree/master/templates)
 - [Serverless Nextjs](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-component)
+
+### AppSync
+- [Serverless AppSync Plugin](https://www.serverless.com/plugins/serverless-appsync-plugin/)
+- [Serverless AppSync](https://www.serverless.com/aws-appsync/)
+
+### GraphQL
+- [Serverless GraphQL](https://github.com/serverless/serverless-graphql)
+- [Efficient APIs with GraphQL and Serverless](https://www.serverless.com/blog/efficient-apis-graphql-serverless/)
+- [Running a scalable & reliable GraphQL endpoint with Serverless](https://www.serverless.com/blog/running-scalable-reliable-graphql-endpoint-with-serverless/)
+
+
+
 
 ## GCP
 
