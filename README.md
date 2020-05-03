@@ -31,6 +31,7 @@
 - [Serverless Components](https://github.com/serverless/components/tree/master/templates)
 - [Serverless Nextjs](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-component)
 - [serverless-nodejs-starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter)
+- [serverless-python-starter](https://github.com/AnomalyInnovations/serverless-python-starter)
 
 ### AppSync
 - [Serverless AppSync Plugin](https://www.serverless.com/plugins/serverless-appsync-plugin/)
