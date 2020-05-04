@@ -1,6 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "./containers/Home";
+import LoadingComponent from "./components/LoadingComponent";
+import Loadable from 'react-loadable';
+
+// import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
@@ -9,12 +12,19 @@ import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+// import AppliedRoute from "./components/AppliedRoute";
+
+
+const AsyncHome = Loadable({
+  loader: () => import("./containers/Home"),
+  loading: LoadingComponent,
+});
 
 export default function Routes() {
   return (
     <Switch>
       <Route exact path="/">
-        <Home />
+        <AsyncHome />
       </Route>
 
       <UnauthenticatedRoute exact path="/login">
