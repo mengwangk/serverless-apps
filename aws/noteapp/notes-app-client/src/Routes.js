@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import LoadingComponent from "./components/LoadingComponent";
-import Loadable from 'react-loadable';
+import Loadable from "react-loadable";
+import ResetPassword from "./containers/ResetPassword";
 
 // import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
@@ -13,7 +14,6 @@ import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 // import AppliedRoute from "./components/AppliedRoute";
-
 
 const AsyncHome = Loadable({
   loader: () => import("./containers/Home"),
@@ -32,6 +32,9 @@ export default function Routes() {
       </UnauthenticatedRoute>
       <UnauthenticatedRoute exact path="/signup">
         <Signup />
+      </UnauthenticatedRoute>
+      <UnauthenticatedRoute exact path="/login/reset">
+        <ResetPassword />
       </UnauthenticatedRoute>
       <AuthenticatedRoute exact path="/settings">
         <Settings />

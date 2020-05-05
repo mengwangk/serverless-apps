@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import { Auth } from "aws-amplify";
 import { useAppContext } from "../libs/contextLib";
@@ -64,6 +65,7 @@ export default function Login() {
         >
           Login
         </LoaderButton>
+        <Link to="/login/reset">Forgot password?</Link>
       </Form>
     </div>
   );

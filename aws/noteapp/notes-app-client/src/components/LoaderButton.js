@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import "./LoaderButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab} from "@fortawesome/free-brands-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faSpinner, fas } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab, fas, faSpinner);
@@ -14,16 +14,9 @@ export default function LoaderButton({
   ...props
 }) {
   return (
-    <Button
-      disabled={disabled || isLoading}
-      {...props}
-    >
+    <Button disabled={disabled || isLoading} {...props}>
       {isLoading && (
-        <FontAwesomeIcon
-          icon={["fas", "spinner"]}
-          pulse
-          fixedWidth
-        />
+        <FontAwesomeIcon icon={["fas", "spinner"]} pulse fixedWidth />
       )}
       {props.children}
     </Button>
