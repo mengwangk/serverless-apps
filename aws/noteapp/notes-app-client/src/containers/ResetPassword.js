@@ -138,8 +138,10 @@ export default function ResetPassword() {
   function renderSuccessMessage() {
     return (
       <div className="success">
-        <FontAwesomeIcon icon={[faCheck]} fixedWidth />
-        <p>Your password has been reset.</p>
+        <FontAwesomeIcon icon={faCheck} fixedWidth />
+        <p>
+        Your password has been reset.
+        </p>
         <p>
           <Link to="/login">
             Click here to login with your new credentials.
