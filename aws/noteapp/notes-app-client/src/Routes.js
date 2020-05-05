@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import LoadingComponent from "./components/LoadingComponent";
 import Loadable from "react-loadable";
 import ResetPassword from "./containers/ResetPassword";
+import ChangePassword from "./containers/ChangePassword";
 
 // import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
@@ -44,6 +45,9 @@ export default function Routes() {
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/notes/:id">
         <Notes />
+      </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/settings/password">
+        <ChangePassword />
       </AuthenticatedRoute>
 
       {/* Finally, catch all unmatched routes */}
