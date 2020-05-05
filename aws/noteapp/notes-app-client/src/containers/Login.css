@@ -3,8 +3,14 @@
     padding: 60px 0;
   }
 
-  .Login form {
+  .Login Form {
     margin: 0 auto;
     max-width: 320px;
   }
+}
+
+.Login Form a {
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
 }
