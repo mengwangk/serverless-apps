@@ -4,6 +4,7 @@ import LoadingComponent from "./components/LoadingComponent";
 import Loadable from "react-loadable";
 import ResetPassword from "./containers/ResetPassword";
 import ChangePassword from "./containers/ChangePassword";
+import ChangeEmail from "./containers/ChangeEmail";
 
 // import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
@@ -49,7 +50,9 @@ export default function Routes() {
       <AuthenticatedRoute exact path="/settings/password">
         <ChangePassword />
       </AuthenticatedRoute>
-
+      <AuthenticatedRoute exact path="/settings/email">
+        <ChangeEmail />
+      </AuthenticatedRoute>
       {/* Finally, catch all unmatched routes */}
       <Route>
         <NotFound />
