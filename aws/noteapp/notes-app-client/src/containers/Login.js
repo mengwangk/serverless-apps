@@ -7,6 +7,7 @@ import { useAppContext } from "../libs/contextLib";
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../libs/errorLib";
 import { useFormFields } from "../libs/hooksLib";
+import FacebookButton from "../components/FacebookButton";
 
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
@@ -18,6 +19,10 @@ export default function Login() {
 
   function validateForm() {
     return fields.email.length > 0 && fields.password.length > 0;
+  }
+
+  function handleFbLogin() {
+    this.props.userHasAuthenticated(true);
   }
 
   async function handleSubmit(event) {
@@ -37,6 +42,8 @@ export default function Login() {
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
+      <FacebookButton onLogin={handleFbLogin} />
+      <hr />
         <Form.Group controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -61,6 +68,7 @@ export default function Login() {
           type="submit"
           size="lg"
           isLoading={isLoading}
+          variant="secondary"
           disabled={!validateForm()}
         >
           Login
