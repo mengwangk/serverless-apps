@@ -22,7 +22,7 @@ export default function Login() {
   }
 
   function handleFbLogin() {
-    this.props.userHasAuthenticated(true);
+    userHasAuthenticated(true);
   }
 
   async function handleSubmit(event) {
