@@ -43,8 +43,8 @@
 - [Running a scalable & reliable GraphQL endpoint with Serverless](https://www.serverless.com/blog/running-scalable-reliable-graphql-endpoint-with-serverless/)
 - [Serverless GraphQL](https://itnext.io/my-experience-with-severless-graphql-2e95e5a8bda7)
 - [Serving over HTTP](https://graphql.org/learn/serving-over-http/)
-
-
+- [GraphQL Lambda DynamoDB](https://www.serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb)
+- [Serverless GraphQL API](https://github.com/boazdejong/serverless-graphql-api)
 
 
 ## GCP
