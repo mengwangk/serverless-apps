@@ -45,7 +45,8 @@
 - [Serving over HTTP](https://graphql.org/learn/serving-over-http/)
 - [GraphQL Lambda DynamoDB](https://www.serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb)
 - [Serverless GraphQL API](https://github.com/boazdejong/serverless-graphql-api)
-
+- [GraphQL Chat](https://www.serverless.com/blog/building-chat-appliation-aws-appsync-serverless)
+- [Serverless AppSync](https://www.serverless.com/aws-appsync)
 
 ## GCP
 
