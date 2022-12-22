@@ -19,7 +19,7 @@
     "serverless-bundle": "^1.2.5",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-mocha-plugin": "^1.12.0",
-    "serverless-offline": "^5.3.3",
+    "serverless-offline": "^12.0.3",
     "serverless-pseudo-parameters": "^2.5.0",
     "standard": "^14.3.3"
   },
